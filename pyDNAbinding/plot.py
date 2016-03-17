@@ -200,7 +200,7 @@ def add_letter_to_axis(ax, let, x, y, height):
         ax.add_patch(patch)
     return
 
-def plot_bases(letter_heights, ylab='bits'):
+def plot_bases(letter_heights, figsize=(12,6), ylab='bits'):
     """Plot the N letters with heights taken from the Nx4 matrix letter_heights.
 
     Inputs:
@@ -208,8 +208,9 @@ def plot_bases(letter_heights, ylab='bits'):
     ylab: x axis label
     """
     assert letter_heights.shape[1] == 4
-
-    fig = pyplot.figure()
+    
+    # fig = pyplot.figure()
+    fig = pyplot.figure(figsize=figsize)
 
     x_range = [1, letter_heights.shape[0]]
 
